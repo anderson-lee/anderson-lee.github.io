@@ -1,11 +1,11 @@
 ---
 layout: page
-title: projects
+title: Projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Projects from my classes and free time which I am moderately proud of.
 nav: true
 nav_order: 2
-display_categories: [work, fun]
+display_categories: [Biology, Computer Science]
 horizontal: false
 ---
 
