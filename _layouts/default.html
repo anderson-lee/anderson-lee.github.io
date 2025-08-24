@@ -67,11 +67,9 @@
         display: block;
       }
       
-      /* Hide the headers because the columns will be stacked */
-      thead tr {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
+      /* Hide the main headers because we'll add new ones to each cell */
+      thead {
+        display: none;
       }
 
       /* Each cell (td) now gets a border and spacing */
@@ -84,6 +82,14 @@
       td:first-of-type {
         margin-top: 20px;
       }
+
+      /* Display the labels for each column using a pseudo-element */
+      td::before {
+        content: attr(data-label);
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
     }
   </style>
 
@@ -95,7 +101,7 @@
 
   <!-- A section for a resume link -->
   <p class="center-text">
-    <a href="URL_TO_YOUR_RESUME" target="_blank">resume</a>
+    <a href="https://drive.google.com/file/d/1c69XUYeen4XCQla1lCIbXlws2AjbCWPV/view?usp=drive_link" target="_blank">Resume</a>
   </p>
 
   <!-- A horizontal rule for a classic look -->
@@ -114,7 +120,7 @@
     </thead>
     <tbody>
       <tr>
-        <td>
+        <td data-label="Biological">
           <ul>
             <li><a href="https://drive.google.com/file/d/1RhvYNC1oxPhMDBJcbEy9C4eunSza_yBQ/view?usp=sharing">How might we optimize biofuel production?</a></li>
             <li><a href="https://drive.google.com/file/d/1RSrxm6WzbcEI9aJpZ-SIztZpyMWvC6t9/view?usp=sharing">How to biomanufacture spice</a></li>
@@ -123,7 +129,7 @@
             <li><a href="https://drive.google.com/file/d/1lMIMfa1rC96LFNZCyq-UJKCTjILDMajA/view?usp=sharing">What the future of robot doctors might look like</a></li>
           </ul>
         </td>
-        <td>
+        <td data-label="Computational">
           <ul>
             <li><a href="https://github.com/eliottpark/seq_alignment">A simple RNA alignment tool</a></li>
             <li><a href="https://github.com/anderson-lee/pcrsimulator">An app to simulate PCR (before this was easily doable on other platforms)</a></li>
