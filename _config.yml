@@ -1,6 +1,6 @@
 title: Ando's site
 email: andersonlee@berkeley.edu
-description: > 
+description: >-
   A place to store things I'm kinda proud of.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://your-site-name.github.io" # the base hostname & protocol for your site
+baseurl: ""
+url: "http://your-site-name.github.io"
