@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | Your Site Name</title>
+  <title>{{ page.title }} | Ando's site</title>
   
   <!-- Minimal CSS for the early internet aesthetic -->
   <style>
@@ -58,6 +58,33 @@
     .center-text {
       text-align: center;
     }
+
+    /* === RESPONSIVE DESIGN === */
+    /* This section makes the table stack on smaller screens. */
+    @media (max-width: 600px) {
+      /* Force the table, headers, and cells to behave like blocks */
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      
+      /* Hide the headers because the columns will be stacked */
+      thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+
+      /* Each cell (td) now gets a border and spacing */
+      td {
+        padding: 10px;
+        border-bottom: 1px solid #000000;
+      }
+      
+      /* Add some space between the new stacked "columns" */
+      td:first-of-type {
+        margin-top: 20px;
+      }
+    }
   </style>
 
 </head>
@@ -68,7 +95,7 @@
 
   <!-- A section for a resume link -->
   <p class="center-text">
-    <a href="https://drive.google.com/file/d/1c69XUYeen4XCQla1lCIbXlws2AjbCWPV/view?usp=sharing" target="_blank">Resume</a>
+    <a href="URL_TO_YOUR_RESUME" target="_blank">resume</a>
   </p>
 
   <!-- A horizontal rule for a classic look -->
@@ -91,7 +118,7 @@
           <ul>
             <li><a href="https://drive.google.com/file/d/1RhvYNC1oxPhMDBJcbEy9C4eunSza_yBQ/view?usp=sharing">How might we optimize biofuel production?</a></li>
             <li><a href="https://drive.google.com/file/d/1RSrxm6WzbcEI9aJpZ-SIztZpyMWvC6t9/view?usp=sharing">How to biomanufacture spice</a></li>
-            <li><a href="https://drive.google.com/file/d/1sDvR6WJKaplvsDy7-MuvTXPVIZJOvucA/view?usp=sharing">Engineering microscopic astronauts</a></li>
+            <li><a href="https://drive.com/file/d/1sDvR6WJKaplvsDy7-MuvTXPVIZJOvucA/view?usp=sharing">Engineering microscopic astronauts</a></li>
             <li><a href="https://drive.google.com/file/d/1dvIeUa45eLK7Zk5xKLlgLKXrLws2oarI/view?usp=sharing">How a scientist taught me advocating for my science is just as important as doing the science</a></li>
             <li><a href="https://drive.google.com/file/d/1lMIMfa1rC96LFNZCyq-UJKCTjILDMajA/view?usp=sharing">What the future of robot doctors might look like</a></li>
           </ul>
@@ -109,6 +136,11 @@
       </tr>
     </tbody>
   </table>
+
+  <!-- The main content area for the page -->
+  <main>
+    {{ content }}
+  </main>
 
 </body>
 </html>
